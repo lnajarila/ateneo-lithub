@@ -3,23 +3,23 @@
  * Description: Context provider to manage user data and provide CRUD functions.
  */
 
-import { createContext, useState } from 'react'
-import { sampleUsers } from '../data/sampleUsers.js'
+import { createContext, useState } from 'react';
+import { sampleUsers } from '../data/sampleUsers.js';
 
-export const UserContext = createContext()
+export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   // Initialize users from localStorage or sample user data
   const [users, setUsers] = useState(() => {
-    const storedUsers = localStorage.getItem('users')
-    return storedUsers ? JSON.parse(storedUsers) : sampleUsers
-  })
+    const storedUsers = localStorage.getItem('users');
+    return storedUsers ? JSON.parse(storedUsers) : sampleUsers;
+  });
 
   // Save to localStorage whenever user data changes
   const saveUsers = (updatedUsers) => {
-    setUsers(updatedUsers)
-    localStorage.setItem('users', JSON.stringify(updatedUsers))
-  }
+    setUsers(updatedUsers);
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+  };
 
   // CREATE: Add a new user
   const createUser = (email, firstName, lastName, password) => {
@@ -28,30 +28,30 @@ export const UserProvider = ({ children }) => {
       firstName: firstName,
       lastName: lastName,
       password: password,
-    }
+    };
 
-    const updatedUsers = [...users, newUser]
-    saveUsers(updatedUsers)
-  }
+    const updatedUsers = [...users, newUser];
+    saveUsers(updatedUsers);
+  };
 
   // READ: Get all users, or a single user by ID
-  const getUsers = () => users
-  const getUserById = (id) => users.find((user) => user.id === id)
+  const getUsers = () => users;
+  const getUserById = (id) => users.find((user) => user.id === id);
 
   // UPDATE: Modify an existing user
   const updateUser = (id, updatedData) => {
     const updatedUsers = users.map((user) => {
-      user.id === id ? {...users, ...updatedData} : user
-    })
+      user.id === id ? {...users, ...updatedData} : user;
+    });
 
-    saveUsers(updatedUsers)
-  }
+    saveUsers(updatedUsers);
+  };
 
   // DELETE: Remove a user
   const deleteUser = (id) => {
-    const updatedUsers = users.filter((user) => user.id !== id)
-    saveUsers(updatedUsers)
-  }
+    const updatedUsers = users.filter((user) => user.id !== id);
+    saveUsers(updatedUsers);
+  };
 
   return (
     <UserContext.Provider
@@ -66,5 +66,5 @@ export const UserProvider = ({ children }) => {
     >
       {children}
     </UserContext.Provider>
-  )
-}
+  );
+};
