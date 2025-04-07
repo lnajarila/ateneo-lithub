@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import RegistrationForm from "../components/RegistrationForm";
+import Footer from "../components/Footer"
+import RegistrationForm from "../components/RegistrationForm"
 
 function Register() {
   return (
@@ -10,4 +10,4 @@ function Register() {
   )
 }
 
-export default Register;
+export default Register
