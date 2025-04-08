@@ -74,4 +74,4 @@ export const sampleUsers = [
     lastName: "Mendoza",
     password: "password123",
   },
-]
+];

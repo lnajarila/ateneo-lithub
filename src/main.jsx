@@ -1,11 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import './index.css';
 import { UserProvider } from './context/UserContext.jsx';
 import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
 import User from './pages/user/User.jsx';
+import Home from './pages/Home.jsx';
+import Register from './pages/Register.jsx';
+import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
