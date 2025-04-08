@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import { UserProvider } from './context/UserContext.jsx';
 import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
-import User from './pages/user/User.jsx';
+import Profile from './pages/profile/Profile.jsx';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='register' element={<Register />} />
           
           <Route path='user'>
-            <Route path=':userId' element={<User />} />
+            <Route path=':userId' element={<Profile />} />
           </Route>
         </Routes>
       </BrowserRouter>
