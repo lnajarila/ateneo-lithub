@@ -3,9 +3,9 @@
  * Description: Profile page to display user information.
  */
 
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router';
-import { UserContext } from '../../context/UserContext.jsx';
+import ProfileCard from '../../widgets/ProfileCard.jsx';
 import BookListings from './BookListings.jsx';
 import UnavailableBooks from './UnavailableBooks.jsx';
 import SoldBooks from './SoldBooks.jsx';
@@ -15,14 +15,12 @@ import Reviews from './Reviews.jsx';
 
 function User() {
   const [profileTabIndex, setProfileTabIndex] = useState(0);
-  const { getUserById } = useContext(UserContext);
   const { userId } = useParams();
-  const user = getUserById(parseInt(userId));
 
   return (
-    <div>
+    <div className="max-w-7xl">
       <section className='mb-8'>
-        <span>{user.firstName} {user.lastName}</span>
+        <ProfileCard userId={userId}/>
       </section>
 
       <div>
