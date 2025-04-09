@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import RegistrationForm from "../components/RegistrationForm";
+import Footer from "../widgets/Footer";
+import RegistrationForm from "../widgets/RegistrationForm";
 
 function Register() {
   return (
