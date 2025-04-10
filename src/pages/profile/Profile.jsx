@@ -7,8 +7,6 @@ import { useState } from 'react';
 import { useParams } from 'react-router';
 import ProfileCard from '../../widgets/ProfileCard.jsx';
 import BookListings from './BookListings.jsx';
-import UnavailableBooks from './UnavailableBooks.jsx';
-import SoldBooks from './SoldBooks.jsx';
 import PurchasedBooks from './PurchasedBooks.jsx';
 import MyOffers from './MyOffers.jsx';
 import Reviews from './Reviews.jsx';
@@ -45,7 +43,7 @@ function Profile() {
                   </li>
                 : <li
                     key={index}
-                    className='px-4 hover:border-b-1 hover:border-primary-500 cursor-pointer'
+                    className='px-4 hover:border-b-1 hover:border-primary-500 text-gray-600 hover:text-gray-900 cursor-pointer'
                     onClick={() => setProfileTabIndex(index)}
                   >
                     {tabName}
@@ -55,9 +53,9 @@ function Profile() {
         </nav>
 
         <section className='px-16 pb-16'>
-          { profileTabIndex == 0 && <BookListings userId={userId} />}
-          { profileTabIndex == 1 && <UnavailableBooks />}
-          { profileTabIndex == 2 && <SoldBooks />}
+          { profileTabIndex == 0 && <BookListings userId={userId} listingStatus={'Available'} />}
+          { profileTabIndex == 1 && <BookListings userId={userId} listingStatus={'Unavailable'} />}
+          { profileTabIndex == 2 && <BookListings userId={userId} listingStatus={'Sold'} />}
           { profileTabIndex == 3 && <PurchasedBooks />}
           { profileTabIndex == 4 && <MyOffers />}
           { profileTabIndex == 5 && <Reviews />}
