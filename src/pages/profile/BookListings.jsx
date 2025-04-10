@@ -1,8 +1,18 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ListingContext } from '../../context/ListingContext.jsx';
 
-function BookListings() {
+function BookListings({ userId }) {
+  const { getListingByUserId } = useContext(ListingContext);
+  const listings = getListingByUserId(parseInt(userId));
+
   return (
-    <p>Book Listings tab</p>
+    <ul>
+      {listings.map((listing) => (
+        <li key={listing.id}>
+          {listing.id} - {listing.title}
+        </li>
+      ))}
+    </ul>
   );
 }
 

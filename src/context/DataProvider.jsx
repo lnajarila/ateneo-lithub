@@ -3,7 +3,7 @@
  * Description: Wrapper to provide all data contexts to app.
  */
 
-import { UserProvider } from 'UserContext.jsx';
+import { UserProvider } from './UserContext.jsx';
 import { ListingProvider } from './ListingContext.jsx';
 
 const providers = [
@@ -15,7 +15,7 @@ function DataProvider({ children }) {
   return providers.reduce((accumulator, Provider) => {
     return (
       <Provider>
-        {acc}
+        {accumulator}
       </Provider>
     );
   }, children);

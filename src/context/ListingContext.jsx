@@ -27,7 +27,7 @@ export const ListingProvider = ({ children }) => {
   // READ: Get listings
   const getListings = () => listings;
   const getListingById = (id) => listings.find((listing) => listing.id === id);
-  const getListingByUserId = (id) => listings.find((listing) => listing.userId === id);
+  const getListingByUserId = (userId) => listings.filter((listing) => listing.userId === userId);
 
   // UPDATE: Modify an existing listing
   const updateListings = (id, updatedData) => {

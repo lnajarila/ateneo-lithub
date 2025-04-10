@@ -55,7 +55,7 @@ function Profile() {
         </nav>
 
         <section className='px-16 pb-16'>
-          { profileTabIndex == 0 && <BookListings />}
+          { profileTabIndex == 0 && <BookListings userId={userId} />}
           { profileTabIndex == 1 && <UnavailableBooks />}
           { profileTabIndex == 2 && <SoldBooks />}
           { profileTabIndex == 3 && <PurchasedBooks />}
