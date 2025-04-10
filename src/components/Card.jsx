@@ -3,9 +3,16 @@
  * Description: Card component for common use in widgets.
  */
 
-function Card({ children }) {
+function Card({ elevation, children }) {
+  const commonClasses = 'rounded-xl overflow-hidden duration-300 ';
+  const elevationClassesList = [
+    'bg-white shadow-sm',
+    'bg-slate-100 hover:bg-slate-50 shadow-md hover:shadow-lg duration-300',
+  ];
+  const elevationClasses = elevationClassesList[elevation - 1];
+
   return (
-    <article className='px-16 py-8 rounded-xl bg-white shadow-sm'>
+    <article className={commonClasses.concat(elevationClasses)}>
       { children }
     </article>
   );
