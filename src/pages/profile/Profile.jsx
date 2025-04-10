@@ -38,14 +38,14 @@ function Profile() {
               return index === profileTabIndex
                 ? <li
                     key={index}
-                    className='px-4 border-b-2 border-blue-900 font-bold text-blue-900 cursor-pointer'
+                    className='px-4 border-b-2 border-primary-500 font-bold text-primary-500 cursor-pointer'
                     onClick={() => setProfileTabIndex(index)}
                   >
                     {tabName}
                   </li>
                 : <li
                     key={index}
-                    className='px-4 hover:border-b-1 hover:border-blue-900 cursor-pointer'
+                    className='px-4 hover:border-b-1 hover:border-primary-500 cursor-pointer'
                     onClick={() => setProfileTabIndex(index)}
                   >
                     {tabName}

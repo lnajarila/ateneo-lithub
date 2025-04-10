@@ -20,7 +20,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-01-13T15:22:05Z', // Earliest date
     updatedAt: '2025-01-14T09:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-01-16T08:55:11Z',
     updatedAt: '2025-01-16T08:55:11Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 3,
@@ -74,7 +74,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-01-23T11:03:18Z',
     updatedAt: '2025-01-25T16:30:00Z',
-    status: 'Pending'
+    status: 'Sold'
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-01-27T09:15:01Z',
     updatedAt: '2025-01-27T09:15:01Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 6,
@@ -110,7 +110,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-01-30T13:25:00Z',
     updatedAt: '2025-02-01T10:10:10Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 7,
@@ -128,7 +128,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-02T09:00:00Z',
     updatedAt: '2025-02-02T09:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 8,
@@ -146,7 +146,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-05T18:45:00Z',
     updatedAt: '2025-02-05T18:45:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 9,
@@ -182,7 +182,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-13T10:30:00Z',
     updatedAt: '2025-02-14T11:35:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 11,
@@ -200,7 +200,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-17T16:20:00Z',
     updatedAt: '2025-02-20T08:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 12,
@@ -218,7 +218,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-21T13:00:00Z',
     updatedAt: '2025-02-21T13:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 13,
@@ -236,7 +236,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-02-25T07:45:00Z',
     updatedAt: '2025-02-25T07:45:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 14,
@@ -272,7 +272,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-05T09:10:00Z',
     updatedAt: '2025-03-05T09:10:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 16,
@@ -290,7 +290,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-09T12:00:00Z',
     updatedAt: '2025-03-11T14:30:00Z',
-    status: 'Pending'
+    status: 'Sold'
   },
   {
     id: 17,
@@ -308,7 +308,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-13T15:00:00Z',
     updatedAt: '2025-03-14T10:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 18,
@@ -344,7 +344,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-21T08:00:00Z',
     updatedAt: '2025-03-22T12:12:12Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 20,
@@ -362,7 +362,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-25T10:10:10Z',
     updatedAt: '2025-03-28T11:11:11Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 21,
@@ -380,7 +380,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-03-29T19:30:00Z',
     updatedAt: '2025-04-01T09:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 22,
@@ -398,7 +398,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-02T11:20:00Z',
     updatedAt: '2025-04-02T11:20:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 23,
@@ -416,7 +416,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-06T13:14:15Z',
     updatedAt: '2025-04-06T13:14:15Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 24,
@@ -452,7 +452,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-14T16:00:00Z',
     updatedAt: '2025-04-17T09:30:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 26,
@@ -470,7 +470,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-18T12:30:00Z',
     updatedAt: '2025-04-18T12:30:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 27,
@@ -488,7 +488,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-22T05:05:05Z',
     updatedAt: '2025-04-23T06:06:06Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 28,
@@ -506,7 +506,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-04-28T10:00:00Z',
     updatedAt: '2025-04-28T10:00:00Z',
-    status: 'Active'
+    status: 'Available'
   },
   {
     id: 29,
@@ -524,7 +524,7 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-05-05T09:00:00Z',
     updatedAt: '2025-05-06T11:00:00Z',
-    status: 'Pending'
+    status: 'Sold'
   },
   {
     id: 30,
@@ -542,6 +542,6 @@ export const sampleListings = [
     imageUrls: [],
     createdAt: '2025-05-22T11:11:11Z', // Latest date
     updatedAt: '2025-05-22T11:11:11Z',
-    status: 'Active'
+    status: 'Available'
   }
 ];
