@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import { UserProvider } from './context/UserContext.jsx';
+import DataProvider from './context/DataProvider.jsx';
 import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
 import Profile from './pages/profile/Profile.jsx';
@@ -9,7 +9,7 @@ import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <UserProvider>
+    <DataProvider>
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
@@ -20,6 +20,6 @@ createRoot(document.getElementById('root')).render(
           </Route>
         </Routes>
       </BrowserRouter>
-    </UserProvider>
+    </DataProvider>
   </StrictMode>
 );
