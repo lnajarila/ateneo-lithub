@@ -6,13 +6,16 @@
 import { useContext } from 'react';
 import { UserContext } from '../context/UserContext.jsx';
 import { ListingContext } from '../context/ListingContext.jsx';
+import { PurchaseContext } from '../context/PurchaseContext.jsx';
 import Card from '../components/Card.jsx';
 
 function ProfileCard({ userId }) {
   const { getUserById } = useContext(UserContext);
   const { getListingsByUserId } = useContext(ListingContext);
+  const { getPurchasesByBuyerId } = useContext(PurchaseContext);
   const user = getUserById(parseInt(userId));
   const listings = getListingsByUserId(parseInt(userId), 'Sold');
+  const purchases = getPurchasesByBuyerId(parseInt(userId));
 
   return (
     <Card elevation={1}>
@@ -52,7 +55,7 @@ function ProfileCard({ userId }) {
               {/* Books Sold */}
               <div className='flex flex-col-reverse justify-center items-center w-48 py-4 rounded-lg bg-gray-100'>
                 <dt className='text-sm text-gray-900'>Books Purchased</dt>
-                <dd className='text-xl font-bold text-gray-900'>5</dd>
+                <dd className='text-xl font-bold text-gray-900'>{purchases.length}</dd>
               </div>
             </dl>
           </aside>
