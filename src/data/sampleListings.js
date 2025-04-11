@@ -1,6 +1,6 @@
 /**
  * Author: Lurd Synell B. Najarila
- * Description: Sample book listings data for authentication and profiles.
+ * Description: Sample book listings data to initially populate the website.
  */
 
 export const sampleListings = [

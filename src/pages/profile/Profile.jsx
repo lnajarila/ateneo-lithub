@@ -56,7 +56,7 @@ function Profile() {
           { profileTabIndex == 0 && <BookListings userId={userId} listingStatus={'Available'} />}
           { profileTabIndex == 1 && <BookListings userId={userId} listingStatus={'Unavailable'} />}
           { profileTabIndex == 2 && <BookListings userId={userId} listingStatus={'Sold'} />}
-          { profileTabIndex == 3 && <PurchasedBooks />}
+          { profileTabIndex == 3 && <PurchasedBooks userId={userId} />}
           { profileTabIndex == 4 && <MyOffers />}
           { profileTabIndex == 5 && <Reviews />}
         </section>
