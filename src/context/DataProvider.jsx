@@ -5,10 +5,12 @@
 
 import { UserProvider } from './UserContext.jsx';
 import { ListingProvider } from './ListingContext.jsx';
+import { PurchaseProvider } from './PurchaseContext.jsx';
 
 const providers = [
   UserProvider,
   ListingProvider,
+  PurchaseProvider,
 ];
 
 function DataProvider({ children }) {
