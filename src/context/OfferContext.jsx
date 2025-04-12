@@ -27,10 +27,9 @@ export const OfferProvider = ({ children }) => {
   // READ: Get offers
   const getOffers = () => offers;
   const getOfferById = (id) => offeres.find((offer) => offer.offerId === id);
-  const getOffersByUserId = (userId, offerStatus) => {
+  const getOffersByUserId = (userId) => {
     return offers
       .filter((offer) => offer.userId === userId)
-      .filter((offer) => offer.status === offerStatus)
       .sort((a, b) => {
         const dateA = new Date(a.offerDate);
         const dateB = new Date(b.offerDate);
