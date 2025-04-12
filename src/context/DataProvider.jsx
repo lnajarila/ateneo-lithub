@@ -6,11 +6,13 @@
 import { UserProvider } from './UserContext.jsx';
 import { ListingProvider } from './ListingContext.jsx';
 import { PurchaseProvider } from './PurchaseContext.jsx';
+import { OfferProvider } from './OfferContext.jsx';
 
 const providers = [
   UserProvider,
   ListingProvider,
   PurchaseProvider,
+  OfferProvider,
 ];
 
 function DataProvider({ children }) {
