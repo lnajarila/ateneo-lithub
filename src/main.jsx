@@ -5,6 +5,7 @@ import DataProvider from './context/DataProvider.jsx';
 import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
 import Profile from './pages/profile/Profile.jsx';
+import ListingDetails from './pages/ListingDetails.jsx';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
@@ -17,6 +18,10 @@ createRoot(document.getElementById('root')).render(
           
           <Route path='user'>
             <Route path=':userId' element={<Profile />} />
+          </Route>
+
+          <Route path='listings'>
+            <Route path=':listingId' element={<ListingDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>
