@@ -4,6 +4,7 @@
  */
 
 import { useContext } from 'react';
+import { Link } from 'react-router';
 import { ListingContext } from '../../context/ListingContext.jsx';
 import ProfileListing from '../../widgets/ProfileListing.jsx';
 
@@ -21,7 +22,9 @@ function BookListings({ userId, listingStatus }) {
     <ul>
       {listings.map((listing) => (
         <li key={listing.id} className='mb-6 last:mb-0'>
-          <ProfileListing listing={listing} listingStatus={listingStatus} />
+          <Link to={`/listings/${listing.id}`}>
+            <ProfileListing listing={listing} listingStatus={listingStatus} />
+          </Link>
         </li>
       ))}
     </ul>

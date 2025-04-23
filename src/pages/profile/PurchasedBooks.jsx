@@ -4,6 +4,7 @@
  */
 
 import { useContext } from 'react';
+import { Link } from 'react-router';
 import { PurchaseContext } from '../../context/PurchaseContext.jsx';
 import { ListingContext } from '../../context/ListingContext.jsx';
 import ProfileListing from '../../widgets/ProfileListing.jsx';
@@ -26,7 +27,9 @@ function PurchasedBooks({ userId }) {
 
         return (
           <li key={purchase.id} className='mb-6 last:mb-0'>
-            <ProfileListing listing={listing} listingStatus={'Available'} />
+            <Link to={`/listings/${listing.id}`}>
+              <ProfileListing listing={listing} listingStatus={'Available'} />
+            </Link>
           </li>
         );
       })}

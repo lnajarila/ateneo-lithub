@@ -4,6 +4,7 @@
  */
 
 import { useContext } from 'react';
+import { Link } from 'react-router';
 import { OfferContext } from '../../context/OfferContext.jsx';
 import { ListingContext } from '../../context/ListingContext.jsx';
 import Card from '../../components/Card.jsx';
@@ -35,13 +36,15 @@ function MyOffers({ userId }) {
                 {/* Listing details */}
                 <section className='flex gap-6 p-8 bg-slate-200'>
                   {/* Book image */}
-                  <figure className='w-40 h-24 bg-accent-500 cursor-pointer'></figure>
+                  <Link to={`/listings/${offer.listingId}`}>
+                    <figure className='w-40 h-24 bg-accent-500'></figure>
+                  </Link>
                   
                   <hgroup className='flex flex-col justify-between'>
-                    <div>
-                      <h4 className='font-serif text-2xl font-bold text-primary-500 cursor-pointer'>{listing.title}</h4>
+                    <Link to={`/listings/${offer.listingId}`}>
+                      <h4 className='font-serif text-2xl font-bold text-primary-500'>{listing.title}</h4>
                       <p className='italic text-gray-900'>{listing.authors.join(', ')}</p>
-                    </div>
+                    </Link>
 
                     <p className='text-lg text-gray-900'>{numberFormat.format(listing.price)}</p>
                   </hgroup>
