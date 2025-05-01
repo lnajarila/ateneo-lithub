@@ -33,7 +33,7 @@ You may push your commits as many times as you want (as long as it's on your own
    git checkout -b <branch-name>
    ```
 
-   We will follow the following format for branch names: ```type-feature-name```. For example, ```feature-login-form```. Types are outlined later down below.
+   We will follow the following format for branch names: ```type/feature-name```. For example, ```feature/login-form```. Types are outlined later down below.
 
 2. **Make Changes.** Edit files, then stage and commit them.
 
