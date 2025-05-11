@@ -1,22 +1,16 @@
-import { useContext, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import { AuthContext } from './context/AuthContext.jsx';
 import Home from './pages/Home.jsx';
+import Login from './pages/login/Login.jsx';
 import Register from './pages/Register.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import ListingDetails from './pages/listing-details/ListingDetails.jsx';
 
-function App() {
-  const { login } = useContext(AuthContext);
-  
-  useEffect(() => {
-    login(4);
-  }, []);
-  
+function App() {  
   return (
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
+        <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
         
         <Route path='user'>

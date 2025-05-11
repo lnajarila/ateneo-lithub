@@ -34,9 +34,12 @@ export const UserProvider = ({ children }) => {
     saveUsers(updatedUsers);
   };
 
-  // READ: Get all users, or a single user by ID
+  // READ: Get users
   const getUsers = () => users;
   const getUserById = (id) => users.find((user) => user.id === id);
+  const getUserOnLogin = (email, password) => {
+    return users.find((user) => user.email === email && user.password === password);
+  }
 
   // UPDATE: Modify an existing user
   const updateUser = (id, updatedData) => {
@@ -60,6 +63,7 @@ export const UserProvider = ({ children }) => {
         createUser,
         getUsers,
         getUserById,
+        getUserOnLogin,
         updateUser,
         deleteUser
       }}
