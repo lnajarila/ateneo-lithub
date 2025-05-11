@@ -3,9 +3,13 @@
  * Description: Accent button component for high-emphasis buttons used for final actions in a flow.
  */
 
-function AccentButton({ children }) {
+function AccentButton({ handleClick, children }) {
   return (
-    <button className='min-w-72 px-8 py-4 rounded-lg bg-accent-500 hover:bg-accent-400 font-bold text-gray-900 cursor-pointer duration-300'>
+    <button
+      className='w-full px-8 py-4 rounded-lg bg-accent-500 hover:bg-accent-400 font-bold text-gray-800 cursor-pointer duration-300'
+      type='button'
+      onClick={() => handleClick()}
+    >
       { children }
     </button>
   );
