@@ -5,6 +5,7 @@
 
 import Card from '../../components/Card.jsx';
 import AccentButton from '../../components/AccentButton.jsx';
+import ListingGallery from './ListingGallery.jsx';
 
 function ListingInfo({ listing }) {
   const numberFormat = Intl.NumberFormat('PH', {style: 'currency', currency: 'PHP'});
@@ -12,16 +13,7 @@ function ListingInfo({ listing }) {
   return (
     <Card elevation={1}>
       <div className='p-16 grid grid-cols-2 gap-16'>
-        <div>
-          <div className='mb-2 aspect-3/2 w-full bg-gray-400'></div>
-
-          <div className='grid grid-cols-4 gap-2'>
-            <div className='aspect-3/2 w-full bg-gray-400'></div>
-            <div className='aspect-3/2 w-full bg-gray-400'></div>
-            <div className='aspect-3/2 w-full bg-gray-400'></div>
-            <div className='aspect-3/2 w-full bg-gray-400'></div>
-          </div>
-        </div>
+        <ListingGallery imageUrls={listing.imageUrls}/>
         
         <div>
           <article className='mb-4'>
