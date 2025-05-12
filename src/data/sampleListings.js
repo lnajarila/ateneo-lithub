@@ -17,7 +17,7 @@ export const sampleListings = [
     subcategory: 'Textbooks',
     course: null,
     description: 'Covers basic programming concepts tailored for local context.\nExcellent condition, barely used.',
-    imageUrls: [],
+    imageUrls: ['','',''],
     createdAt: '2025-01-13T15:22:05Z', // Earliest date
     updatedAt: '2025-01-14T09:00:00Z',
     status: 'Available'
@@ -35,7 +35,7 @@ export const sampleListings = [
     subcategory: 'Short Stories & Anthologies',
     course: null,
     description: 'A collection of folk tales surrounding the Mayon Volcano.\nSome wear on the cover, pages are clean.',
-    imageUrls: [],
+    imageUrls: ['','','','',''],
     createdAt: '2025-01-16T08:55:11Z',
     updatedAt: '2025-01-16T08:55:11Z',
     status: 'Available'
