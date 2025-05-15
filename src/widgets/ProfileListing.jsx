@@ -1,5 +1,4 @@
 import Card from '../components/Card.jsx';
-import Chip from '../components/Chip.jsx';
 
 function ProfileListing({ listing, listingStatus }) {
   const numberFormat = Intl.NumberFormat('PH', {style: 'currency', currency: 'PHP'});
@@ -22,8 +21,12 @@ function ProfileListing({ listing, listingStatus }) {
 
           <div className='flex justify-between items-end h-full'>
             <div className='flex gap-2'>
-              <Chip>{listing.category}</Chip>
-              <Chip>{listing.subcategory}</Chip>
+              <p className='rounded-lg px-4 py-1 bg-gray-300 text-gray-600 text-sm'>
+                {listing.category}
+              </p>
+              <p className='rounded-lg px-4 py-1 bg-gray-300 text-gray-600 text-sm'>
+                {listing.subcategory}
+              </p>
             </div>
 
             <p className='font-extrabold text-primary-500 text-2xl'>
