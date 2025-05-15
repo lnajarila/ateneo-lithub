@@ -9,7 +9,7 @@ import { ListingContext } from '../../context/ListingContext.jsx';
 import getListingStatus from './getListingStatus.js';
 import ListingBanner from './ListingBanner.jsx';
 import ListingInfo from './ListingInfo.jsx';
-import BookCard from '../../components/BookCard.jsx';
+import BookCard from '../../widgets/BookCard.jsx';
 import Header from '../../widgets/Header.jsx';
 import ProfileCard from '../../widgets/ProfileCard.jsx';
 
@@ -56,10 +56,10 @@ function ListingDetails() {
             <h3 className='font-serif text-3xl font-bold text-gray-900'>Similar Listings</h3>
 
             <div className='grid grid-cols-4 gap-4 mt-4'>
-              <BookCard />
-              <BookCard />
-              <BookCard />
-              <BookCard />
+              <BookCard listing={ listing } />
+              <BookCard listing={ listing } />
+              <BookCard listing={ listing } />
+              <BookCard listing={ listing } />
             </div>
           </section>
         </div>
