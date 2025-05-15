@@ -12,7 +12,7 @@ function ListingInfo({ listing }) {
   
   return (
     <Card elevation={1}>
-      <div className='p-16 grid grid-cols-2 gap-16'>
+      <div className='p-16 grid grid-cols-[6fr_4fr] gap-12'>
         <ListingGallery imageUrls={listing.imageUrls}/>
         
         <div>
