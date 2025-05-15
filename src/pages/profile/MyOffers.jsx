@@ -31,8 +31,8 @@ function MyOffers({ userId }) {
         
         return (
           <li key={offer.offerId} className='group mb-6 last:mb-0'>
-            <Card elevation={2}>
-              <div className='flex flex-col brightness-95 hover:brightness-100 duration-300'>
+            <Card elevation={2} isClickable={true}>
+              <div className='flex flex-col'>
                 {/* Listing details */}
                 <section className='flex gap-6 p-8 bg-slate-200'>
                   {/* Book image */}

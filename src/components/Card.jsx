@@ -3,16 +3,25 @@
  * Description: Card component for common use in widgets.
  */
 
-function Card({ elevation, children }) {
-  const commonClasses = 'rounded-xl overflow-hidden duration-300 ';
-  const elevationClassesList = [
-    'bg-white shadow-sm',
-    'bg-slate-100 hover:bg-slate-50 shadow-md hover:shadow-lg duration-300',
-  ];
-  const elevationClasses = elevationClassesList[elevation - 1];
+function Card({ elevation, isClickable = false, children }) {
+  let className = 'rounded-xl overflow-hidden ';
+
+  if (elevation == 1) {
+    if (isClickable) {
+      className += 'bg-white shadow-sm hover:shadow-lg cursor-pointer duration-300';
+    } else {
+      className += 'bg-white shadow-sm';
+    }
+  } else if (elevation == 2) {
+    if (isClickable) {
+      className += 'bg-slate-50 shadow-sm hover:shadow-md cursor-pointer duration-300';
+    } else {
+      className += 'bg-slate-50 shadow-sm';
+    }
+  }
 
   return (
-    <article className={commonClasses.concat(elevationClasses)}>
+    <article className={className}>
       { children }
     </article>
   );

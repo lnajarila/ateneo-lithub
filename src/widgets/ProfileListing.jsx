@@ -1,16 +1,15 @@
 import Card from '../components/Card.jsx';
-import Chip from '../components/Chip.jsx';
 
 function ProfileListing({ listing, listingStatus }) {
   const numberFormat = Intl.NumberFormat('PH', {style: 'currency', currency: 'PHP'});
 
   return (
-    <Card elevation={2}>
-      <div className='group flex h-32 cursor-pointer'>
+    <Card elevation={2} isClickable={true}>
+      <div className='group flex h-32'>
         {/* Book Image */}
         {listingStatus === 'Unavailable'
-          ? <figure className='w-64 h-full bg-blue-400 grayscale brightness-90 group-hover:brightness-100 duration-300'></figure>
-          : <figure className='w-64 h-full bg-blue-400 brightness-90 group-hover:brightness-100 duration-300'></figure>
+          ? <figure className='w-64 h-full bg-blue-400 grayscale'></figure>
+          : <figure className='w-64 h-full bg-blue-400'></figure>
         }
 
         {/* Listing Details */}
@@ -22,8 +21,12 @@ function ProfileListing({ listing, listingStatus }) {
 
           <div className='flex justify-between items-end h-full'>
             <div className='flex gap-2'>
-              <Chip>{listing.category}</Chip>
-              <Chip>{listing.subcategory}</Chip>
+              <p className='rounded-lg px-4 py-1 bg-gray-300 text-gray-600 text-sm'>
+                {listing.category}
+              </p>
+              <p className='rounded-lg px-4 py-1 bg-gray-300 text-gray-600 text-sm'>
+                {listing.subcategory}
+              </p>
             </div>
 
             <p className='font-extrabold text-primary-500 text-2xl'>
