@@ -5,12 +5,12 @@ function ProfileListing({ listing, listingStatus }) {
   const numberFormat = Intl.NumberFormat('PH', {style: 'currency', currency: 'PHP'});
 
   return (
-    <Card elevation={2}>
-      <div className='group flex h-32 cursor-pointer'>
+    <Card elevation={2} isClickable={true}>
+      <div className='group flex h-32'>
         {/* Book Image */}
         {listingStatus === 'Unavailable'
-          ? <figure className='w-64 h-full bg-blue-400 grayscale brightness-90 group-hover:brightness-100 duration-300'></figure>
-          : <figure className='w-64 h-full bg-blue-400 brightness-90 group-hover:brightness-100 duration-300'></figure>
+          ? <figure className='w-64 h-full bg-blue-400 grayscale'></figure>
+          : <figure className='w-64 h-full bg-blue-400'></figure>
         }
 
         {/* Listing Details */}
