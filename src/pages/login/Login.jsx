@@ -9,9 +9,7 @@ import LoginForm from './LoginForm.jsx';
 function Login() {
   return (
     <div className='flex flex-col h-screen'>
-      <header>
-        <Header />
-      </header>
+
 
       <main className='m-auto'>
         <LoginForm />
