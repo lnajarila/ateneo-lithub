@@ -1,39 +1,33 @@
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './widgets/Header.jsx';
+import { useState, useEffect } from 'react';
 import Home from './pages/Home.jsx';
 import Login from './pages/login/Login.jsx';
 import Register from './pages/Register.jsx';
-import Profile from './pages/profile/Profile.jsx';
 import ListingDetails from './pages/listing-details/ListingDetails.jsx';
 
 function App() {
   const [page, setPage] = useState('home');
 
-  // Example image URLs for ListingGallery
-  const imageUrls = [
-    'https://via.placeholder.com/300x200?text=Image+1',
-    'https://via.placeholder.com/300x200?text=Image+2',
-    'https://via.placeholder.com/300x200?text=Image+3',
-  ];
+  const handleNavigation = (pageName) => {
+    setPage(pageName);
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.appNavigation = handleNavigation;
+    return () => {
+      delete window.appNavigation;
+    };
+  }, []);
 
   return (
-    <BrowserRouter>
-      <Header onNavigate={setPage} />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path='login' element={<Login />} />
-        <Route path='register' element={<Register />} />
-        
-        <Route path='user'>
-          <Route path=':userId' element={<Profile />} />
-        </Route>
-
-        <Route path='listings'>
-          <Route path=':listingId' element={<ListingDetails />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow">
+        {page === 'home' && <Home onNav={handleNavigation} />}
+        {page === 'browse-books' && <ListingDetails onNav={handleNavigation} />}
+        {page === 'login' && <Login onNav={handleNavigation} />}
+        {page === 'register' && <Register onNav={handleNavigation} />}
+      </main>
+    </div>
   );
 }
 

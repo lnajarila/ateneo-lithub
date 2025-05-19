@@ -1,9 +1,12 @@
 import React from "react";
 import Header from "../widgets/Header.jsx";
-function Home() {
+import Footer from "../widgets/Footer";
+
+function Home( { onNav }) {
   return (
     <>
-
+    <Header onNav={onNav} />
+    
     </>
   );
 }
