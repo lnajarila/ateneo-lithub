@@ -42,7 +42,7 @@ function ProfileCard({ userId }) {
                 <dt className='text-sm text-gray-900'>52 Reviews</dt>
                 <div className='flex gap-1 items-center'>
                   <dd className='text-xl font-bold text-gray-900'>4.2</dd>
-                  <span className='material-symbols-outlined text-accent-500'>star</span>
+                  <span className='material-icons accent'>star</span>
                 </div>
               </div>
               
