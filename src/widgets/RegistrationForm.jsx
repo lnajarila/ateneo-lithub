@@ -7,7 +7,7 @@ import React from 'react'
 
 const RegistrationForm = () => {
   return (
-    <div className='flex flex-col justify-center items-center min-h-screen px-4 py-10 bg-gray-50'>
+    <div className='flex flex-col justify-center items-center min-h-screen px-4 py-10 bg-white'>
       <div className='w-full max-w-4xl shadow-[0px_0px_15px_rgba(0,0,0,0.1)] bg-white p-10 rounded-lg'>
         <div className='flex flex-col justify-center items-center text-center'>
           <h1 className='font-serif font-bold text-4xl'>Create an Account</h1>

@@ -16,14 +16,14 @@ function Header() {
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
           <a 
-            href="#home" 
-            className="text-white hover:text-gray-300 text-lg transition-colors duration-300"
+            href="/home" 
+            className="text-white hover:text-gray-300 text-lg transition-colors duration-300 font-sans"
           >
             Home
           </a>
           <a 
-            href="#browse-books" 
-            className="text-white hover:text-gray-300 text-lg transition-colors duration-300"
+            href="/listings" 
+            className="text-white hover:text-gray-300 text-lg transition-colors duration-300 font-sans"
           >
             Browse Books
           </a>
@@ -31,14 +31,14 @@ function Header() {
 
         <div className="flex items-center space-x-4">
           <a 
-            href="#login" 
-            className="text-white hover:text-gray-300 transition-colors duration-300"
+            href="/login" 
+            className="text-white transition-colors duration-300 font-sans border border-white rounded-sm px-4 py-1"
           >
             Login
           </a>
           <a 
-            href="#signup" 
-            className="border border-white px-4 py-1 rounded-md hover:bg-white hover:text-[#1D4289] transition-colors duration-300"
+            href="/register" 
+            className="border border-white px-4 py-1 rounded-sm bg-white text-[#1D4289] transition-colors duration-300 font-sans"
           >
             Sign Up
           </a>
