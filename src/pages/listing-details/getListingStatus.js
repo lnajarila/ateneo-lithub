@@ -9,7 +9,7 @@ import { AuthContext } from '../../context/AuthContext.jsx';
 function getListingStatus(listing) {
   const { userAuth } = useContext(AuthContext);
 
-  if (listing.userId === userAuth) {
+  if (listing.userId === parseInt(userAuth)) {
     if (listing.status === 'Available') return 'OwnAvailable';
     if (listing.status === 'Unavailable') return 'OwnUnavailable';
     if (listing.status === 'Sold') return 'Sold';

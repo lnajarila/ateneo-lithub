@@ -7,7 +7,7 @@ import Card from '../../components/Card.jsx';
 import AccentButton from '../../components/AccentButton.jsx';
 import ListingGallery from './ListingGallery.jsx';
 
-function ListingInfo({ listing }) {
+function ListingInfo({ listing, listingStatus }) {
   const numberFormat = Intl.NumberFormat('PH', {style: 'currency', currency: 'PHP'});
   
   return (
@@ -62,9 +62,11 @@ function ListingInfo({ listing }) {
             <p>{listing.description}</p>
           </article>
 
-          <div className='flex justify-center w-full'>
-            <AccentButton>Make Offer</AccentButton>
-          </div>
+          {listingStatus === 'PublicAvailable' && (
+            <div className='flex justify-center w-full'>
+              <AccentButton>Make Offer</AccentButton>
+            </div>
+          )}
         </div>
       </div>
     </Card>

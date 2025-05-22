@@ -38,19 +38,21 @@ function ListingDetails() {
 
           {status !== 'PublicAvailable' &&
             <section className='mt-4'>
-              <ListingBanner listing={listing} />
+              <ListingBanner listingStatus={status} />
             </section>
           }
 
           <section className='mt-4'>
-            <ListingInfo listing={listing} />
+            <ListingInfo listing={listing} listingStatus={status} />
           </section>
 
-          <section className='mt-8'>
-            <Link to={`/user/${listing.userId}`}>
-              <ProfileCard userId={listing.userId} />
-            </Link>
-          </section>
+          { (!status.includes('Own') && status !== 'Sold') &&
+              <section className='mt-8'>
+                <Link to={`/user/${listing.userId}`}>
+                  <ProfileCard userId={listing.userId} />
+                </Link>
+              </section>
+          }
 
           <section className='mt-16'>
             <h3 className='font-serif text-3xl font-bold text-gray-900'>Similar Listings</h3>

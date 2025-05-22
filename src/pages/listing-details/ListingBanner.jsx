@@ -9,40 +9,20 @@ import { AuthContext } from '../../context/AuthContext.jsx';
 import SurfaceButton from '../../components/SurfaceButton.jsx';
 import OutlinedButton from '../../components/OutlinedButton.jsx';
 
-function ListingBanner({ listing }) {
+function ListingBanner({ listingStatus }) {
   const { userAuth } = useContext(AuthContext);
-  let status = 'PublicAvailable';
-
-  if (listing.userId === userAuth) {
-    if (listing.status === 'Available') {
-      status = 'OwnAvailable';
-    }
-    if (listing.status === 'Unavailable') {
-      status = 'OwnUnavailable';
-    }
-    if (listing.status === 'Sold') {
-      status = 'Sold';
-    }
-  } else {
-    if (listing.status === 'Unavailable') {
-      status = 'PublicUnavailable';
-    }
-    if (listing.status === 'Sold') {
-      status = 'Purchased';
-    }
-  }
 
   return (
     <section className='flex justify-between items-center px-8 py-6 rounded-lg bg-primary-500 shadow-md'>
       <p className='text-slate-100'>
-        {status === 'OwnAvailable' && 'You are viewing your own listing.'}
-        {status === 'OwnUnavailable' && 'You have currently marked this listing as unavailable.'}
-        {status === 'PublicUnavailable' && 'This listing is currently marked as unavailable by the seller.'}
-        {status === 'Sold' && 'You are viewing an archived listing of a book you sold.'}
-        {status === 'Purchased' && 'You are viewing an archived listing of a book you purchased.'}
+        {listingStatus === 'OwnAvailable' && 'You are viewing your own listing.'}
+        {listingStatus === 'OwnUnavailable' && 'You have currently marked this listing as unavailable.'}
+        {listingStatus === 'PublicUnavailable' && 'This listing is currently marked as unavailable by the seller.'}
+        {listingStatus === 'Sold' && 'You are viewing an archived listing of a book you sold.'}
+        {listingStatus === 'Purchased' && 'You are viewing an archived listing of a book you purchased.'}
       </p>
 
-      {status === 'OwnAvailable' &&
+      {listingStatus === 'OwnAvailable' &&
         <nav className='flex gap-4'>
           <SurfaceButton>Mark as Unavailable</SurfaceButton>
           <OutlinedButton>Edit Listing</OutlinedButton>
@@ -52,7 +32,7 @@ function ListingBanner({ listing }) {
         </nav>
       }
 
-      {status === 'OwnUnavailable' &&
+      {listingStatus === 'OwnUnavailable' &&
         <nav className='flex gap-4'>
           <SurfaceButton>Mark as Available</SurfaceButton>
           <OutlinedButton>Edit Listing</OutlinedButton>
@@ -62,13 +42,13 @@ function ListingBanner({ listing }) {
         </nav>
       }
 
-      {status === 'PublicUnavailable' &&
+      {listingStatus === 'PublicUnavailable' &&
         <nav className='flex gap-4'>
           <OutlinedButton>Return to Listings</OutlinedButton>
         </nav>
       }
 
-      {(status === 'Sold' || status === 'Purchased') &&
+      {(listingStatus === 'Sold' || listingStatus === 'Purchased') &&
         <nav className='flex gap-4'>
           <OutlinedButton>View Messages</OutlinedButton>
           <Link to={`/user/${userAuth}`}>
