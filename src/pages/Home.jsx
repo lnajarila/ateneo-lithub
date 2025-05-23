@@ -21,7 +21,7 @@ function Home() {
       <Header />
 
       <div className="min-h-screen flex flex-col items-center">
-        <div className="text-center mt-10 w-full py-7 flex flex-col items-center shadow-md">
+        <div className="text-center py-16 w-full flex flex-col items-center shadow-md bg-white">
           <h1 className="font-serif text-[32px] font-bold">Buy & Sell Books</h1>
           <p className="font-sans text-[16px] text-[#4A5568]">
             Connect with fellow Ateneans to buy and sell textbooks, novels, comics, and<br />
@@ -56,7 +56,7 @@ function Home() {
         </div>
 
         {/* Listings Section */}
-        <div className="w-full max-w-screen-xl px-4 mt-10">
+        <div className="w-full max-w-screen-xl px-4 mt-16">
           {selectedCategory === null ? (
             <>
               {/* Featured Listings */}
