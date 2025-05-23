@@ -6,6 +6,7 @@
 import { useContext, useState } from 'react';
 import { useParams } from 'react-router';
 import { AuthContext } from '../../context/AuthContext.jsx';
+import Footer from '../../widgets/Footer.jsx';
 import Header from '../../widgets/Header.jsx';
 import ProfileCard from '../../widgets/ProfileCard.jsx';
 import BookListings from './BookListings.jsx';
@@ -32,12 +33,12 @@ function Profile() {
       ];
 
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <header>
         <Header />
       </header>
       
-      <main className='py-16'>
+      <main className='flex-1 py-16'>
         <div className='mx-auto max-w-3/4'>
           <section className='mb-8'>
             <ProfileCard userId={userId}/>
@@ -86,6 +87,8 @@ function Profile() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

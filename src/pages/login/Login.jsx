@@ -4,11 +4,12 @@
  */
 
 import Header from '../../widgets/Header.jsx';
+import Footer from '../../widgets/Footer.jsx';
 import LoginForm from './LoginForm.jsx';
 
 function Login() {
   return (
-    <div className='flex flex-col h-screen'>
+    <div className='flex flex-col min-h-screen'>
       <header>
         <Header />
       </header>
@@ -16,6 +17,8 @@ function Login() {
       <main className='m-auto'>
         <LoginForm />
       </main>
+
+      <Footer />
     </div>
   );
 }

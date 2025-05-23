@@ -10,6 +10,7 @@ import getListingStatus from './getListingStatus.js';
 import ListingBanner from './ListingBanner.jsx';
 import ListingInfo from './ListingInfo.jsx';
 import BookCard from '../../widgets/BookCard.jsx';
+import Footer from '../../widgets/Footer.jsx';
 import Header from '../../widgets/Header.jsx';
 import ProfileCard from '../../widgets/ProfileCard.jsx';
 
@@ -66,6 +67,8 @@ function ListingDetails() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
