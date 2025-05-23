@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ListingContext } from '../context/ListingContext.jsx';
 import CategoryFilter from '../widgets/CategoryFilter.jsx';
 import Footer from '../widgets/Footer.jsx';
 import Header from '../widgets/Header.jsx';
@@ -8,14 +9,12 @@ import { sampleListings } from '../data/sampleListings.js';
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  
   const categories = ['All Books', ...new Set(sampleListings.map((item) => item.category))];
 
-  const featuredListings = sampleListings.slice(0, 4);
-
-  const latestListings = [...sampleListings]
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0, 4);
+  const { getFeaturedListings, getLatestListings } = useContext(ListingContext);
+  const featuredListings = getFeaturedListings();
+  const latestListings = getLatestListings();
 
   return (
     <>

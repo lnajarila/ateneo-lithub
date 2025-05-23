@@ -37,6 +37,21 @@ export const ListingProvider = ({ children }) => {
         return dateB - dateA;
       });
   };
+  const getFeaturedListings = () => {
+    return listings
+      .filter((listing) => listing.status === 'Available')
+      .slice(0, 4);
+  };
+  const getLatestListings = () => {
+    return listings
+      .filter((listing) => listing.status === 'Available')
+      .sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return dateB - dateA;
+      })
+      .slice(0, 4);
+  };
 
   // UPDATE: Modify an existing listing
   const updateListings = (id, updatedData) => {
@@ -62,6 +77,8 @@ export const ListingProvider = ({ children }) => {
         getListings,
         getListingById,
         getListingsByUserId,
+        getFeaturedListings,
+        getLatestListings,
         updateListings,
         deleteListing,
       }}
