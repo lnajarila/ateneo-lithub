@@ -4,11 +4,11 @@ import Header from '../widgets/Header.jsx';
 
 function Register() {
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
       <Header />
       <RegistrationForm />
       <Footer />
-    </>
+    </div>
   )
 }
 
